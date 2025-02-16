@@ -84,7 +84,6 @@ function createEmployee() {
 
 // TODO
 function deleteEmployee(id) {  
-  console.log("Deleting employee with ID:", id); // Debugging line
   
   if (!confirm("Are you sure you want to delete this employee?")) return;
 
@@ -93,7 +92,7 @@ function deleteEmployee(id) {
   })
     .then(response => response.json())
     .then(data => {
-      console.log("Delete response:", data); // Debugging line
+      console.log("Delete response:", data); 
       fetchEmployees(); // Refresh the list
     })
     .catch((error) => console.error("Error deleting employee:", error));
